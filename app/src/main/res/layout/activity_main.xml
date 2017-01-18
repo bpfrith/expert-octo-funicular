@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/rock_button_id"
+        android:text="@string/rock_string"
+        android:background="@drawable/rock"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="rockButtonPressed"/>
+
+    <Button
+        android:id="@+id/paper_button_id"
+        android:text="@string/paper_sting"
+        android:background="@drawable/paper"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="paperButtonPressed"/>
+
+    <Button
+        android:id="@+id/scissors_button_id"
+        android:text="@string/scissors_string"
+        android:background="@drawable/scissors"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scissorsButtonPressed"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50sp"
+        android:textSize="50sp"
+        android:id="@+id/result_id"
+        android:text=""/>
+
+</LinearLayout>
