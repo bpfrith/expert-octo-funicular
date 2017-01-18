@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
     Button paperButton;
     Button scissorsButton;
     TextView result;
+    Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,23 +28,26 @@ public class GameActivity extends AppCompatActivity {
         paperButton = (Button)findViewById(R.id.paper_button_id);
         scissorsButton = (Button)findViewById(R.id.scissors_button_id);
 
+        game = new Game();
+
     }
 
     public void rockButtonPressed(View button) {
         result = (TextView)findViewById(R.id.result_id);
-        String returnedString = Game.play("Rock");
+        String returnedString = game.play("Rock");
         result.setText(returnedString);
     }
 
     public void paperButtonPressed(View button) {
         result = (TextView)findViewById(R.id.result_id);
-        String returnedString = Game.play("Paper");
+
+        String returnedString = game.play("Paper");
         result.setText(returnedString);
     }
 
     public void scissorsButtonPressed(View button) {
         result = (TextView)findViewById(R.id.result_id);
-        String returnedString = Game.play("Scissors");
+        String returnedString = game.play("Scissors");
         result.setText(returnedString);
     }
 }

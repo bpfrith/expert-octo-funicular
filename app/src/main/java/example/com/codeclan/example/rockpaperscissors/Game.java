@@ -9,7 +9,15 @@ import java.util.Random;
 
 public class Game {
 
-    public static String play(String choice) {
+    int playerScore;
+    int computerScore;
+
+    public Game(){
+        this.playerScore = 0;
+        this.computerScore = 0;
+    }
+
+    public String play(String choice) {
         ArrayList<String> choices = new ArrayList<>();
         choices.add("Rock");
         choices.add("Paper");
@@ -26,17 +34,23 @@ public class Game {
 
         switch(choice + resultAI) {
             case "RockPaper":
+                computerScore += 1;
                 return "Paper wraps Rock. You lose!";
             case "RockScissors":
+                playerScore += 1;
                 return "Rock blunts Scissors. You win!";
             case "ScissorsPaper":
+                playerScore += 1;
                 return "Scissors cut Paper. You win!";
             case "ScissorsRock":
+                computerScore += 1;
                 return "Rock blunts Scissors. You lose!";
             case "PaperScissors":
+                computerScore += 1;
                 return "Scissors cut Paper. You lose!";
             case "PaperRock":
-                return "Paper wraps Rock. You win!";
+                playerScore += 1;
+                return "Paper wraps Rock. You win! You "+ playerScore +", Computer "+ computerScore;
         }
         return "input invalid";
     }
