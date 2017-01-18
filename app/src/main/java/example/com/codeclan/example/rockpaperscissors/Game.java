@@ -29,25 +29,25 @@ public class Game {
         String resultAI = choices.get(randomIndex);
 
         if (choice == resultAI){
-            return "It's a draw. Play again.";
+            return "It's a draw. Play again. You "+ playerScore +", Computer "+ computerScore;
         }
 
         switch(choice + resultAI) {
             case "RockPaper":
                 computerScore += 1;
-                return "Paper wraps Rock. You lose!";
+                return "Paper wraps Rock. You lose! You "+ playerScore +", Computer "+ computerScore;
             case "RockScissors":
                 playerScore += 1;
-                return "Rock blunts Scissors. You win!";
+                return "Rock blunts Scissors. You win! You "+ playerScore +", Computer "+ computerScore;
             case "ScissorsPaper":
                 playerScore += 1;
-                return "Scissors cut Paper. You win!";
+                return "Scissors cut Paper. You win! You "+ playerScore +", Computer "+ computerScore;
             case "ScissorsRock":
                 computerScore += 1;
-                return "Rock blunts Scissors. You lose!";
+                return "Rock blunts Scissors. You lose! You "+ playerScore +", Computer "+ computerScore;
             case "PaperScissors":
                 computerScore += 1;
-                return "Scissors cut Paper. You lose!";
+                return "Scissors cut Paper. You lose! You "+ playerScore +", Computer "+ computerScore;
             case "PaperRock":
                 playerScore += 1;
                 return "Paper wraps Rock. You win! You "+ playerScore +", Computer "+ computerScore;
